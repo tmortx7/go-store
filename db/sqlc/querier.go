@@ -12,17 +12,25 @@ type Querier interface {
 	AddAccountBalance(ctx context.Context, arg AddAccountBalanceParams) (Account, error)
 	CreateAccount(ctx context.Context, arg CreateAccountParams) (Account, error)
 	CreateEntry(ctx context.Context, arg CreateEntryParams) (Entry, error)
+	CreateInstrumentType(ctx context.Context, arg CreateInstrumentTypeParams) (Instrumenttype, error)
+	CreateMeasuredVariable(ctx context.Context, arg CreateMeasuredVariableParams) (Measuredvariable, error)
 	CreateProcessVariable(ctx context.Context, arg CreateProcessVariableParams) (Processvariable, error)
 	CreateTransfer(ctx context.Context, arg CreateTransferParams) (Transfer, error)
 	DeleteAccount(ctx context.Context, id int64) error
+	DeleteInstrumentType(ctx context.Context, id int64) error
+	DeleteMeasuredVariable(ctx context.Context, id int64) error
 	DeleteProcessVariable(ctx context.Context, id int64) error
 	GetAccount(ctx context.Context, id int64) (Account, error)
 	GetAccountForUpdate(ctx context.Context, id int64) (Account, error)
 	GetEntry(ctx context.Context, id int64) (Entry, error)
+	GetInstrumentType(ctx context.Context, id int64) (Instrumenttype, error)
+	GetMeasuredVariable(ctx context.Context, id int64) (Measuredvariable, error)
 	GetProcessVariable(ctx context.Context, id int64) (Processvariable, error)
 	GetTransfer(ctx context.Context, id int64) (Transfer, error)
 	ListAccounts(ctx context.Context, arg ListAccountsParams) ([]Account, error)
 	ListEntries(ctx context.Context, arg ListEntriesParams) ([]Entry, error)
+	ListInstrumentTypes(ctx context.Context, arg ListInstrumentTypesParams) ([]Instrumenttype, error)
+	ListMeasuredVariables(ctx context.Context, arg ListMeasuredVariablesParams) ([]Measuredvariable, error)
 	ListProcessVariables(ctx context.Context, arg ListProcessVariablesParams) ([]Processvariable, error)
 	ListTransfers(ctx context.Context, arg ListTransfersParams) ([]Transfer, error)
 	UpdateAccount(ctx context.Context, arg UpdateAccountParams) (Account, error)

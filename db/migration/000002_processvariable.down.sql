@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS processvariable;
+DROP TABLE IF EXISTS processvariables;

@@ -25,6 +25,22 @@ type Entry struct {
 	CreatedAt time.Time `json:"created_at"`
 }
 
+type Instrumenttype struct {
+	ID          int64          `json:"id"`
+	Type        string         `json:"type"`
+	Alias       string         `json:"alias"`
+	Description sql.NullString `json:"description"`
+	CreatedAt   time.Time      `json:"created_at"`
+}
+
+type Measuredvariable struct {
+	ID          int64          `json:"id"`
+	Variable    string         `json:"variable"`
+	Alias       string         `json:"alias"`
+	Description sql.NullString `json:"description"`
+	CreatedAt   time.Time      `json:"created_at"`
+}
+
 type Processvariable struct {
 	ID          int64          `json:"id"`
 	Name        string         `json:"name"`
